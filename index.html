@@ -4,11 +4,65 @@
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
+
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="assets/images/addthis-game-of-thrones-logo.png" class="img-fluid textcenter" id="mainLogo" alt="Game of Thrones logo">
+                <h1 class="display-3">Game of Trivia</h1>
+                <hr>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-md-3">
+                <div>
 
+                    <h3 id="timer"></h3>
+                </div>
+            </div>
+
+            <div class="offset-md-1"></div>
+
+            <div class="col-md-8">
+                <div id="startPage" class="start-page-text">
+                    <h2>Are you the next three eyed raven?</h2>
+                    <p>Test your knowledge of <i>Game of Thrones</i> with this multiple choice trivia game. You have 60 seconds to save the Seven Kingdoms and answer all the questions or you will be thrown through the Moondoor and we get to see you fly</p>
+                    <div class="btn btn-primary" id="startButton">Begin
+                    </div>
+                </div>
+
+            <div>
+                <div id="questionBox">
+
+                </div>
+            </div>
+            
+                <div class="hidden" id="endPage">
+                    <h2>Scores</h2>
+                    <p id="correctAns"></p>
+                    <p id="incorrectAns"></p>
+                    <p id="unAns"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+            <div class="container-fluid">
+              <hr>
+              <span class="text-center">
+                <p>&copy; Copyright 2019 Colin Pena</p>
+                <p id="copyright-small" class="text-muted">Images featuring <i>Game of Thrones</i> are the property of their respective owners.</p></span>
+              </div>
+            </footer>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 
 </body>
