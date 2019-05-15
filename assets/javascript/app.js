@@ -60,9 +60,9 @@ var trivia = {
             var answer2 = questionBank[i].answers[1];
             var answer3 = questionBank[i].answers[2];
 
-            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer1 + '</label></div>');
-            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer2 + '</label></div>');
-            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer3 + '</label></div>');
+            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'-1"><label class="form-check-label" id="radio'+i+'-1-label" for="radio'+i+'">' + answer1 + '</label></div>');
+            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'-2"><label class="form-check-label" id="radio'+i+'-2-label" for="radio'+i+'">' + answer2 + '</label></div>');
+            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'-3"><label class="form-check-label" id="radio'+i+'-3-label" for="radio'+i+'">' + answer3 + '</label></div>');
         }
 
         var doneButton = '<button class="btn btn-primary" id="doneButton" type="submit">Done</button>';
@@ -82,8 +82,8 @@ var trivia = {
            
             for (var i = 0; i < questionBank.length; i++) {
             correctAns = questionBank[i].correct;
-            userAns = $('input[id=radio'+i+']:checked + label').text();
-            console.log(userAns)
+            userAns = $('input[name=radio-group'+i+']:checked + label').text();
+            console.log(userAns + ', ans:'+ correctAns);
 
             if (userAns === correctAns) {
                 numCorrect++;
@@ -115,7 +115,7 @@ var questionBank =
     {
         question: "Where are the Wildlings from?",
         answers: ["Dorn", "North of the Wall", "Mareen"],
-        correct: "North of the Wall"
+        correct: "North of the Wall" // 1 possible way -questionBank[1].answers[1]
     },
 
     {
@@ -128,47 +128,47 @@ var questionBank =
     {
         question: "What is the name of Jon Snows Dog?",
         answers: ["Ghost", "Drogon", "Lady"],
-        answer: "Ghost"
+        correct: "Ghost"
     
     },
 
     {
         question: "What is Jamie Lannisters nickname?",
         answers: ["Kingslayer", "The Imp", "Hodor"],
-        answer: "Kingslayer"
+        correct: "Kingslayer"
 
     },
 
     {
         question: "Whats Tyrions favorite drink",
         answers: ["Wine", "Bud Light", "Water"],
-        answer: "Wine"
+        correct: "Wine"
         
     },
 
     {
         question: "What is the punishment for abandoning the Nights Watch?",
         answers: ["Death", "Imprisonment", "Fines"],
-        answer: "Death"
+        correct: "Death"
     },
 
     {
         question: "What is Aryas fighting style?",
         answers: ["Water Dancing", "Brazillian Jiu Jitsu", "Fencing"],
-        answer: "Water Dancing"
+        correct: "Water Dancing"
 
     },
 
     {
         question: "How many Dragons does Daenerys Targaryen have?",
         answers: ["1", "2", "3"],
-        answer: "3"
+        correct: "3"
     },
 
     {
         question: "Whats the worst season of Game of Thrones?",
         answers: ["1", "2", "8"],
-        answer: "8"
+        correct: "8"
 
     },
 
